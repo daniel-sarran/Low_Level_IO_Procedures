@@ -1,9 +1,5 @@
 TITLE Low-level I/O procedures
 ; Author: Daniel Sarran
-; Last Modified: 03/14/2021
-; OSU email address: sarrand@oregonstate.edu
-; Course number/section:   CS271 Section 400
-; Project Number: 6                Due Date: 03/14/2021
 ; Description:	Program requests user input for 10 integers, where each
 ;				integer is small enough to fit inside a 32-bit register.
 ;				Each entry is validated for size (not greater than 32-bit),
@@ -91,11 +87,8 @@ MIN_INTEGER = -2147483648
 
 .data
 ; Introduction procedure data labels
-programTitle	BYTE	"PROGRAMMING ASSIGNMENT 6: Designing low-level I/O ",
-						"procedures",13,10,
-						"Written by: Daniel Sarran",13,10,
-						"**EC: Numbers each line of user input and displays a ",
-						"running subtotal of user’s valid numbers.",13,10,13,10,0
+programTitle	BYTE	"Designing Low-Level I/O Procedures:",13,10,
+						"Written by Daniel Sarran",13,10,13,10,0
 programDesc		BYTE	"Please provide 10 signed decimal integers.",13,10,
 						"Each number needs to be small enough to fit inside",
 						" a signed 32 bit value. After you have finished inputting ",
@@ -105,13 +98,13 @@ programDesc		BYTE	"Please provide 10 signed decimal integers.",13,10,
 ; Fill Array procedure data labels
 userPrompt		BYTE	"Please enter a signed number: ",0
 userString		BYTE	INPUT_SIZE DUP(?)
-error			BYTE	"ERROR! Invalid input, please try again.",13,10,13,10,0
+error			BYTE	"    (Invalid input, please try again.)",13,10,0
 numericVal		DWORD	?
 numValuesArray	DWORD	INPUT_COUNT DUP(0)
 parenDelimiter	BYTE	") ",0
 
 ; Extra Credit 1 data labels
-subtotalText	BYTE	"Subtotal:  ",0
+subtotalText	BYTE	"    Subtotal:  ",0
 
 ; Print Array procedure data labels
 arrayText		BYTE	"You entered the following numbers: ",13,10,0
