@@ -1,4 +1,4 @@
-# Designing_Low_Level_IO_Procedures
+# Low Level IO Procedures
 A program showcasing various assembly code disciplines where 10 integers are converted to strings, and displayed to the user along with the sum and average of those integers. A running subtotal is displayed as the user enters integers.
 
 
